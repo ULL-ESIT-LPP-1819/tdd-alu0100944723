@@ -1,6 +1,6 @@
 class Informacion_nutricional
 
-	def initialize (nombre)
-		@nombre=nombre
+	def initialize (nombre,grasa)
+		@nombre,@grasa=nombre,grasa
 	end		
 end
