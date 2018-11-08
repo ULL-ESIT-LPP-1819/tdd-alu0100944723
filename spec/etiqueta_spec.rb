@@ -5,8 +5,8 @@ RSpec.describe Etiqueta do
     expect(Etiqueta::VERSION).not_to be nil
   end
  
-  it "Comprobar que existe la clase Informacion nutricional" do
-    p=Informacion_nutricional.new()
+  it "Existe un nombre para la etiqueta" do
+    p=Informacion_nutricional.new("producto")
   end
-
+ 
 end
