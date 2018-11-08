@@ -1,0 +1,2 @@
+class Informacion_nutricional
+end
