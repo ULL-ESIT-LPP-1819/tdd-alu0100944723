@@ -33,6 +33,13 @@ class Informacion_nutricional
         def valenkjproteinas
                 @proteinas*17
         end
+	
+	def valenkcalsal
+                @sal*6
+        end
 
+        def valenkjsal
+                @sal*25
+        end	
 end
 
