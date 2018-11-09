@@ -27,6 +27,9 @@ describe "Comprobando los accesos" do
 		expect(@e.grasam).to eq(1.4)
 		expect(@e.grasap).to eq(0.2)
 	end
+	it "Se almacenan correctamente los hidratos de carbono" do
+		expect(@e.hidratos).to eq(6.7)
+	end
 end
 
 end
