@@ -50,5 +50,14 @@ describe "Calculo del las grasas" do
 		expect(@e.grasas).to eq(2.8)
 	end
 end
-end
 
+describe "Calculo del Valor energético" do
+	it "En kcal" do
+		expect(@e.valenkcalgrasas).to eq(23.4)
+	end
+	it "En kj" do
+		expect(@e.valenkjgrasas).to eq(96.2)
+	end
+
+end
+end
