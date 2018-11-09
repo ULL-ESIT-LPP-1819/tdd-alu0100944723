@@ -21,6 +21,12 @@ describe "Comprobando los accesos" do
 	it "Se almacena correctamente el nombre de la etiqueta" do
 		expect(@e.nombre).to eq("producto")
 	end
+	
+	it "Se almacena correctamente las grasas(poliinsaturadas,monoinsaturadas y saturadas"
+		expect(@e.grasasat).to eq(1.2)
+		expect(@e.grasam).to eq(1.4)
+		expect(@e.grasap).to eq(0.2)
+	end
 end
 
 end
