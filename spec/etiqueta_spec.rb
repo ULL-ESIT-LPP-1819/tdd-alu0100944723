@@ -66,4 +66,13 @@ describe "Calculo del Valor energético" do
 	end
 
 end
+describe "Calculo del valor energético total" do
+	it "En kcal" do
+		expect(@e.valorenergeticokcal).to eq(63.48)
+	end
+	
+	it "En kj" do
+		expect(@e.valorenergeticokj).to eq(265.9)
+	end
+end
 end
