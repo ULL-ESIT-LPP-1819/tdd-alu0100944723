@@ -49,6 +49,6 @@ class Informacion_nutricional
 	def valorenergeticokj
                 self.valenkjgrasas+self.valenkjhidratos+self.valenkjsal+self.valenkjproteinas
         end
-	
+
 end
 

@@ -75,4 +75,11 @@ describe "Calculo del valor energético total" do
 		expect(@e.valorenergeticokj).to eq(266.2)
 	end
 end
+describe "Prueba de obtencion de la salida formateada" do
+	
+	it "La salida se muestra correctamente" do
+		expect(@e.to_s).to eq( "Valor Energético:\n kcal 63.48 \n kj 266.2\n_______________________\nGrasas  \n de las cuales \n saturadas 1.2 \n monoinsaturadas 1.4\n poliinsaruradas 0.2\n_______________________\nHidratos de carbono 6.7\n de los cuales \n azucares 6.7\n_______________________\n proteinas 2.6\n_______________________\n sal 0.18\n_______________________\n ")
+	end 
+end
+
 end
