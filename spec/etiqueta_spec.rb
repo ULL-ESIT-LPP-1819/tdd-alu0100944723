@@ -30,6 +30,10 @@ describe "Comprobando los accesos" do
 	it "Se almacenan correctamente los hidratos de carbono" do
 		expect(@e.hidratos).to eq(6.7)
 	end
+	
+	it "Se almacenan correctamente los azucares" do
+		expect(@e.azucares).to eq(6.7)
+	end
 end
 
 end
