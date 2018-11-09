@@ -56,11 +56,13 @@ describe "Calculo del Valor energético" do
 		expect(@e.valenkcalgrasas).to eq(25.2)
 		expect(@e.valenkcalhidratos).to eq(26.8)
 		expect(@e.valenkcalproteinas).to eq(10.4)
+		expect(@e.valenkcalsal).to eq(1.08)
 	end
 	it "En kj" do
 		expect(@e.valenkjgrasas).to eq(103.6)
 		expect(@e.valenkjhidratos).to eq(113.9)
-		expect(@e.valenkjproteinas).to eq(44.2)		
+		expect(@e.valenkjproteinas).to eq(44.2)	
+		expect(@e.valenkjsal).to eq(4.5)	
 	end
 
 end
