@@ -25,5 +25,14 @@ class Informacion_nutricional
 	def valenkjhidratos
 		@hidratos*17
 	end
+	
+	def valenkcalproteinas
+                @proteinas*4
+        end
+
+        def valenkjproteinas
+                @proteinas*17
+        end
+
 end
 
