@@ -1,6 +1,6 @@
 class Informacion_nutricional
 	
-	attr_reader :nombre, :grasasat, :grasam, :grasap, :hidratos
+	attr_reader :nombre, :grasasat, :grasam, :grasap, :hidratos, :azucares
 
 	def initialize (nombre,grasasat,grasam,grasap,hidratos,azucares,proteinas,sal)
 		@nombre,@grasasat,@grasam,@grasap,@hidratos,@azucares,@proteinas,@sal=nombre,grasasat,grasam,grasap,hidratos,azucares,proteinas,sal
