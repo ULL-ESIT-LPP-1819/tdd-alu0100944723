@@ -22,7 +22,7 @@ describe "Comprobando los accesos" do
 		expect(@e.nombre).to eq("producto")
 	end
 	
-	it "Se almacena correctamente las grasas(poliinsaturadas,monoinsaturadas y saturadas"
+	it "Se almacena correctamente las grasas(poliinsaturadas,monoinsaturadas y saturadas" do
 		expect(@e.grasasat).to eq(1.2)
 		expect(@e.grasam).to eq(1.4)
 		expect(@e.grasap).to eq(0.2)
