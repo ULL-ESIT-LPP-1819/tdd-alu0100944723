@@ -50,5 +50,8 @@ class Informacion_nutricional
                 self.valenkjgrasas+self.valenkjhidratos+self.valenkjsal+self.valenkjproteinas
         end
 
+	def to_s
+		 "Valor Energético:\n kcal #{self.valorenergeticokcal} \n kj #{self.valorenergeticokj}\n_______________________\nGrasas #{self.grasas} \n de las cuales \n saturadas #{@grasasat} \n monoinsaturadas #{@grasam}\n poliinsaruradas #{@grasap}\n_______________________\nHidratos de carbono #{@hidratos}\n de los cuales \n azucares #{@azucares}\n_______________________\n proteinas #{@proteinas}\n_______________________\n sal #{@sal}\n_______________________\n "
+	end
 end
 
