@@ -9,5 +9,13 @@ class Informacion_nutricional
 	def grasas
 		@grasasat+@grasam+@grasap
 	end
+	
+	def valenkcalgrasas
+		self.grasas*9
+	end 
+
+	def valenkjgrasas
+		self.grasas*37
+	end
 end
 
