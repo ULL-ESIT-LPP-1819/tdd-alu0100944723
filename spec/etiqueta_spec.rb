@@ -44,5 +44,11 @@ describe "Comprobando los accesos" do
 	end
 end
 
+describe "Calculo del las grasas" do
+	
+	it "Las grasas se calculan bien" do
+		expect(@e.grasas).to eq(2.8)
+	end
+end
 end
 
