@@ -41,5 +41,14 @@ class Informacion_nutricional
         def valenkjsal
                 @sal*25
         end	
+	
+	def valorenergeticokcal
+		self.valenkcalgrasas+self.valenkcalhidratos+self.valenkcalsal+self.valenkcalproteinas
+	end
+
+	def valorenergeticokj
+                self.valenkjgrasas+self.valenkjhidratos+self.valenkjsal+self.valenkjproteinas
+        end
+	
 end
 

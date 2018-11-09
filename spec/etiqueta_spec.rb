@@ -72,7 +72,7 @@ describe "Calculo del valor energético total" do
 	end
 	
 	it "En kj" do
-		expect(@e.valorenergeticokj).to eq(265.9)
+		expect(@e.valorenergeticokj).to eq(266.2)
 	end
 end
 end
