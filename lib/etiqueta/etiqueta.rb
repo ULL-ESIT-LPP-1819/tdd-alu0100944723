@@ -17,5 +17,13 @@ class Informacion_nutricional
 	def valenkjgrasas
 		self.grasas*37
 	end
+	
+	def valenkcalhidratos
+		@hidratos*4
+	end
+
+	def valenkjhidratos
+		@hidratos*17
+	end
 end
 
