@@ -38,6 +38,10 @@ describe "Comprobando los accesos" do
 	it "Se almacenan correctamente las proteinas" do
 		expect(@e.proteinas).to eq(2.6)
 	end
+	
+	it "Se almacena correctamente la sal" do
+		expect(@e.sal).to eq(0.18)
+	end
 end
 
 end
