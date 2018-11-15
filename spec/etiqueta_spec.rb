@@ -89,7 +89,7 @@ RSpec.describe Node do
 end
 
 RSpec.describe Lista do
-	before :all do
+	before :each do
 		@l=Lista.new
 	end
 
@@ -119,6 +119,14 @@ RSpec.describe Lista do
                         expect(@l.tail.prev).to eq(nil)
 
 		end
+		
+		it "Debe insertarse un nodo correctamente por la cola si la lista no está vacía" do
+			@l.insert_tail(3)
+			@l.insert_tail(4)
+			n=Node.new(4,nil,@l.tail)	
+			expect(@l.head.next).to eq(n)
+			expect(@l.tail).to eq(n)
+		end	
 	end		
 end
 
