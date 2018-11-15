@@ -89,5 +89,19 @@ RSpec.describe Node do
 end
 
 RSpec.describe Lista do
+	before :all do
+		@l=Lista.new
+	end
 
+	describe "Probando el initialize" do
+		it "Debe existir una  Lista" do
+			l1=Lista.new
+		end
+
+		
+		it "Deben crearse las variables @head y @tail" do
+			expect(@l.head).to eq(nil)
+			expect(@l.tail).to eq(nil)
+		end	
+	end
 end
