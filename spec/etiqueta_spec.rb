@@ -104,4 +104,6 @@ RSpec.describe Lista do
 			expect(@l.tail).to eq(nil)
 		end	
 	end
+	
 end
+
