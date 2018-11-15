@@ -108,6 +108,17 @@ RSpec.describe Lista do
 		it "Debe existir un método que compruebe si la lista está vacía" do
 			expect(@l.is_empty).to eq(true)
 		end
+		
+		it "Debe insertarse un nodo correctamente por la cola si la lista está vacía" do
+			@l.insert_tail(5)
+			expect(@l.head.value).to eq(5)
+			expect(@l.head.next).to eq(nil)
+			expect(@l.head.prev).to eq(nil)
+			expect(@l.tail.value).to eq(5)
+                        expect(@l.tail.next).to eq(nil)
+                        expect(@l.tail.prev).to eq(nil)
+
+		end
 	end		
 end
 
