@@ -13,4 +13,11 @@ class Lista
 		end
 	end
 	
+	def insert_tail(value)
+		if self.is_empty
+			n=Node.new(value,nil,nil)
+			@head=n
+			@tail=n
+		end
+	end	
 end
