@@ -87,3 +87,7 @@ RSpec.describe Node do
 		n=Node.new
 	end
 end
+
+RSpec.describe Lista do
+
+end
