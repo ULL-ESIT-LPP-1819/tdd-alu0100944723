@@ -104,6 +104,10 @@ RSpec.describe Lista do
 			expect(@l.tail).to eq(nil)
 		end	
 	end
-	
+	describe "Probando la lista" do
+		it "Debe existir un método que compruebe si la lista está vacía" do
+			expect(@l.is_empty).to eq(true)
+		end
+	end		
 end
 
