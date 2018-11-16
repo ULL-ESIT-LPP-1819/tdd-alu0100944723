@@ -91,6 +91,11 @@ end
 RSpec.describe Lista do
 	before :each do
 		@l=Lista.new
+		@e5=Informacion_nutricional.new("producto5",1.2,1.4,0.2,6.7,6.7,2.6,1.2)
+		@e4=Informacion_nutricional.new("producto4",1.2,1.4,0.2,6.7,6.7,2.6,3.50)
+		@e3=Informacion_nutricional.new("producto3",1.2,1.4,0.2,6.7,6.7,2.6,6.8)
+		@e2=Informacion_nutricional.new("producto2",1.2,1.4,0.2,6.7,6.7,2.6,8.0)
+		@e1=Informacion_nutricional.new("producto1",1.2,1.4,0.2,6.7,6.7,2.6,9.3)
 	end
 
 	describe "Probando el initialize" do
@@ -172,9 +177,20 @@ RSpec.describe Lista do
                         @l.extrae_tail
                         expect(@l.tail).to eq(n)
                         expect(@l.tail.next).to eq(nil)
-                end
+                end		
+	end	
 
 
-		
-	end		
+	describe "Probando la lista con etiquetas" do
+		it "Clasificando según la sal" do
+			@l.insert_tail(@e1)
+			@l.insert_tail(@e2)
+			@l.insert_tail(@e3)
+			@l.insert_tail(@e4)
+			@l.insert_tail(@e5)
+			@l.recorrer_sal
+			expect(@l.salmenor6).to eq([@e5,@e4])
+			expect(@l.salmayor6).to eq([@e1,@e2,@e3])
+		end
+	end	
 end
