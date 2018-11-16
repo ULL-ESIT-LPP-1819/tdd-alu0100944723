@@ -53,6 +53,10 @@ class Lista
                 if @head==@tail
                         @head=nil
                         @tail=nil
-		end
+		else
+                        @tail=@tail.prev
+                        @tail.next=nil
+                end
+
          end
 end
