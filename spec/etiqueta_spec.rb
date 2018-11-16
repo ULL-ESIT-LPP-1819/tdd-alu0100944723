@@ -137,7 +137,7 @@ RSpec.describe Lista do
                         expect(@l.tail.prev).to eq(nil)
 
 		end
-	                it "Debe insertarse un nodo correctamente por la cabecera si la lista no está vacía" do
+	        it "Debe insertarse un nodo correctamente por la cabecera si la lista no está vacía" do
                         @l.insert_head(3)
                          n=Node.new(4,@l.head,nil)
                         @l.insert_head(4)
@@ -145,10 +145,20 @@ RSpec.describe Lista do
                         expect(@l.head).to eq(n)
                 end
 		
-			it "Debe extraerse un nodo correctamente por la cabecera si la lista sólo tiene un elemento" do
-				@l.insert_head(4)
-				@l.extrae_head
-				expect(@l.is_empty).to eq(true)
-			end
+		it "Debe extraerse un nodo correctamente por la cabecera si la lista sólo tiene un elemento" do
+			@l.insert_head(4)
+			@l.extrae_head
+			expect(@l.is_empty).to eq(true)
+		end
+		 it "Debe extraerse un nodo correctamente por la cabecera si la lista tiene más de un elemento" do
+                        @l.insert_head(4)
+			n=Node.new(4,nil,nil)
+			@l.insert_head(6)
+                        @l.extrae_head
+                        expect(@l.head).to eq(n)
+			expect(@l.head.prev).to eq(nil)
+                end
+
+		
 	end		
 end
