@@ -137,6 +137,13 @@ RSpec.describe Lista do
                         expect(@l.tail.prev).to eq(nil)
 
 		end
+	                it "Debe insertarse un nodo correctamente por la cabecera si la lista no está vacía" do
+                        @l.insert_head(3)
+                         n=Node.new(4,@l.head,nil)
+                        @l.insert_head(4)
+                        expect(@l.tail.prev).to eq(n)
+                        expect(@l.head).to eq(n)
+                end
+		
 	end		
 end
-
