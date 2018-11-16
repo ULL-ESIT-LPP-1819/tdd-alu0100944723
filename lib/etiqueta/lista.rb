@@ -38,4 +38,11 @@ class Lista
 
 
 	end	
+		
+	def extrae_head
+		if @head==@tail
+			@head=nil
+			@tail=nil
+		end
+	end
 end
