@@ -145,5 +145,10 @@ RSpec.describe Lista do
                         expect(@l.head).to eq(n)
                 end
 		
+			it "Debe extraerse un nodo correctamente por la cabecera si la lista sólo tiene un elemento" do
+				@l.insert_head(4)
+				@l.extrae_head
+				expect(@l.is_empty).to eq(true)
+			end
 	end		
 end
