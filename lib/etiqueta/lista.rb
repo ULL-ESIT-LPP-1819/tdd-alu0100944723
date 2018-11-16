@@ -48,4 +48,11 @@ class Lista
 			@head.prev=nil
 		end
 	end
+	
+	  def extrae_tail
+                if @head==@tail
+                        @head=nil
+                        @tail=nil
+		end
+         end
 end
