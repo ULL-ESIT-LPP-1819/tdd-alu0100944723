@@ -111,7 +111,7 @@ RSpec.describe Lista do
 	end
 	describe "Probando la lista" do
 		it "Debe existir un método que compruebe si la lista está vacía" do
-			expect(@l.is_empty).to eq(true)
+			expect(@l.is_empty?).to eq(true)
 		end
 		
 		it "Debe insertarse un nodo correctamente por la cola si la lista está vacía" do
@@ -153,7 +153,7 @@ RSpec.describe Lista do
 		it "Debe extraerse un nodo correctamente por la cabecera si la lista sólo tiene un elemento" do
 			@l.insert_head(4)
 			@l.extrae_head
-			expect(@l.is_empty).to eq(true)
+			expect(@l.is_empty?).to eq(true)
 		end
 		 it "Debe extraerse un nodo correctamente por la cabecera si la lista tiene más de un elemento" do
                         @l.insert_head(4)
@@ -167,7 +167,7 @@ RSpec.describe Lista do
 	        it "Debe extraerse un nodo correctamente por la cola si la lista sólo tiene un elemento" do
                         @l.insert_tail(4)
                         @l.extrae_tail
-                        expect(@l.is_empty).to eq(true)
+                        expect(@l.is_empty?).to eq(true)
                 end
 		
 		  it "Debe extraerse un nodo correctamente por la cabecera si la lista tiene más de un elemento" do

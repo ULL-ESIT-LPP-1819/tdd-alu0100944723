@@ -9,14 +9,14 @@ class Lista
 		@salmayor6=Array.new
 	end
 	
-	def is_empty 
+	def is_empty?
 		if @head==nil && @tail==nil
 			true
 		end
 	end
 	
 	def insert_tail(value)
-		if self.is_empty
+		if self.is_empty?
 			n=Node.new(value,nil,nil)
 			@head=n
 			@tail=n
@@ -28,7 +28,7 @@ class Lista
 	end
 	
 	def insert_head(value)	
-		if self.is_empty
+		if self.is_empty?
                         n=Node.new(value,nil,nil)
                         @head=n
                         @tail=n
@@ -63,7 +63,7 @@ class Lista
          end
 	
 	def recorrer_sal
-		while self.is_empty!=true
+		while self.is_empty?!=true
 			if @head.value.sal>6.0
 				@salmayor6 << (@head.value)
 				self.extrae_head
