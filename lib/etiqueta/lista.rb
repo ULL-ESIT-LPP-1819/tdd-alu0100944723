@@ -26,11 +26,16 @@ class Lista
 	end
 	
 	def insert_head(value)	
-		  if self.is_empty
+		if self.is_empty
                         n=Node.new(value,nil,nil)
                         @head=n
                         @tail=n
+                else
+                        n=Node.new(value,@head,nil)
+                        @head.prev=n
+                        @head=n
                 end
+
 
 	end	
 end
