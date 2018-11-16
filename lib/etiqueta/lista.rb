@@ -18,6 +18,10 @@ class Lista
 			n=Node.new(value,nil,nil)
 			@head=n
 			@tail=n
+		else
+			n=Node.new(value,nil,@tail)
+			@tail.next=n
+			@tail=n
 		end
 	end	
 end

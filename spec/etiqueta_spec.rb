@@ -122,8 +122,8 @@ RSpec.describe Lista do
 		
 		it "Debe insertarse un nodo correctamente por la cola si la lista no está vacía" do
 			@l.insert_tail(3)
-			@l.insert_tail(4)
-			n=Node.new(4,nil,@l.tail)	
+			 n=Node.new(4,nil,@l.tail)
+			@l.insert_tail(4)	
 			expect(@l.head.next).to eq(n)
 			expect(@l.tail).to eq(n)
 		end	
