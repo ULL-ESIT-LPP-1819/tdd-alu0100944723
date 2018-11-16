@@ -159,10 +159,22 @@ RSpec.describe Lista do
 			expect(@l.head.prev).to eq(nil)
                 end
 
-		    it "Debe extraerse un nodo correctamente por la cola si la lista sólo tiene un elemento" do
+	        it "Debe extraerse un nodo correctamente por la cola si la lista sólo tiene un elemento" do
                         @l.insert_tail(4)
                         @l.extrae_tail
                         expect(@l.is_empty).to eq(true)
                 end
+		
+		  it "Debe extraerse un nodo correctamente por la cabecera si la lista tiene más de un elemento" do
+                        @l.insert_tail(4)
+                        n=Node.new(4,nil,nil)
+                        @l.insert_tail(6)
+                        @l.extrae_tail
+                        expect(@l.tail).to eq(n)
+                        expect(@l.tail.next).to eq(nil)
+                end
+
+
+		
 	end		
 end
