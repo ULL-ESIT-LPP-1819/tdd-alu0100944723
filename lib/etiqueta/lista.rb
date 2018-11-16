@@ -1,10 +1,12 @@
 Node=Struct.new(:value,:next,:prev)
 
 class Lista
-	attr_reader :head, :tail
+	attr_reader :head, :tail, :salmenor6, :salmayor6
 	def initialize
 		@head=nil
 		@tail=nil
+		@salmenor6=Array.new
+		@salmayor6=Array.new
 	end
 	
 	def is_empty 
@@ -59,4 +61,17 @@ class Lista
                 end
 
          end
+	
+	def recorrer_sal
+		while self.is_empty!=true
+			if @head.value.sal>6.0
+				@salmayor6 << (@head.value)
+				self.extrae_head
+			else
+				@salmenor6 << (@head.value)
+				self.extrae_head
+			end
+		end
+			
+	end
 end

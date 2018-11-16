@@ -189,7 +189,7 @@ RSpec.describe Lista do
 			@l.insert_tail(@e4)
 			@l.insert_tail(@e5)
 			@l.recorrer_sal
-			expect(@l.salmenor6).to eq([@e5,@e4])
+			expect(@l.salmenor6).to eq([@e4,@e5])
 			expect(@l.salmayor6).to eq([@e1,@e2,@e3])
 		end
 	end	
