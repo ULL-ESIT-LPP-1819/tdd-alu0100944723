@@ -290,4 +290,10 @@ RSpec.describe Paciente do
 
 		end
         end	
+	describe "Probando el to_s" do
+		it "Debe existir el metodo to_s para los pacientes" do
+			expect(@p1.to_s).to eq("Nombre:Lara,Edad:27,Sexo:0,Peso:50,Talla:1.69,Cintura:62,Cadera:65")
+		end
+
+	end
 end
