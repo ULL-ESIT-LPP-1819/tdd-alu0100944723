@@ -15,4 +15,8 @@ class Paciente < Individuo
 		@cmcin=cmcin
 		@cmcad=cmcad
 	end
+	
+	def imc 
+		(@peso/(@talla*@talla)).round(3)	
+	end
 end
