@@ -196,10 +196,18 @@ RSpec.describe Lista do
 end
 
 RSpec.describe Individuo do
+	  before :each do
+                @i=Individuo.new("Clara",25,0)
+        end
+	
 	describe "Pruebas basicas de los individuos" do
 		it"Probando el initialize de los individuos" do
 			i=Individuo.new("Clara",25,0)
 		end
-		
+		it"Probando los getters" do
+			expect(@i.nombre).to eq("Clara")
+			expect(@i.edad).to eq(25)
+			expect(@i.sexo).to eq(0)
+		end
 	end
 end
