@@ -213,6 +213,10 @@ RSpec.describe Individuo do
 			expect(@i.class).to eq(Individuo)
 			expect(Individuo.class).to eq(Class)
 		end
+		
+		it"Debe existir el método to_s" do
+			expect(@i.to_s).to eq("Nombre:Clara,Edad:25,Sexo:0") 
+		end
 	end
 end
 
@@ -285,6 +289,5 @@ RSpec.describe Paciente do
 			expect(@l.obesidad_3).to eq([@p6])
 
 		end
-        end
-		
+        end	
 end
