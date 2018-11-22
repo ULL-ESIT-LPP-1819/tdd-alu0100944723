@@ -194,3 +194,6 @@ RSpec.describe Lista do
 		end
 	end	
 end
+
+RSpec.describe Individuo do
+end
