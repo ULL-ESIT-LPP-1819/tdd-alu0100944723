@@ -245,6 +245,16 @@ RSpec.describe Paciente do
 		it"BasicObject es es superclase de Object" do
 			expect(Object.superclass).to eq(BasicObject)
 		end
+		it"Probando la clase y el tipo de un objeto" do
+			
+			expect(@p1.class).to eq(Paciente)#La clase de un objeto es única
+			expect(@p1.is_a?Individuo).to eq(true)#Puede ser de muchos tipos
+			expect(@p1.is_a?Paciente).to eq(true)
+			expect(@p1.is_a?BasicObject).to eq(true)
+			expect(@p1.kind_of?Paciente).to eq(true)
+			expect(@p1.kind_of?Individuo).to eq(true)
+			expect(@p1.kind_of?BasicObject).to eq(true)
+		end
 	end	
 	
 	describe "Probando el initialize" do
