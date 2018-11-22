@@ -231,4 +231,10 @@ RSpec.describe Paciente do
 			expect(Object.superclass).to eq(BasicObject)
 		end
 	end	
+	
+	describe "Probando el initialize" do
+		it "Paciente tiene que tener un nombre, una edad y un sexo" do
+			p=Paciente("Lara",22,0)
+		end
+	end
 end
