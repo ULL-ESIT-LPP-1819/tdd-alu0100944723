@@ -219,7 +219,17 @@ end
 RSpec.describe Paciente do
 
 	before :each do
-		@p=Paciente.new("Lara",22,0,50,1.69,62,65)	
+	
+	@l=Lista.new
+	@p1=Paciente.new("Lara",27,0,50,1.69,62,65)
+	@p2=Paciente.new("CLara",35,0,60,1.50,62,65)
+	@p3=Paciente.new("Mario",16,1,60,1.68,62,65)
+ 	@p4=Paciente.new("Sara",23,0,80,1.60,62,65)
+ 	@p5=Paciente.new("Paula",25,0,110,1.70,62,65)
+ 	@p6=Paciente.new("Juan",28,1,120,1.70,62,65)
+	@p7=Paciente.new("Pedro",26,1,60,1.70,62,65)
+	@p8=Paciente.new("Maria",29,0,70,1.64,62,65)	
+
         end
 
 	
@@ -245,8 +255,26 @@ RSpec.describe Paciente do
 	
         describe "Clasificando por el imc" do
                 it "Debe existir un metodo para calcular el imc" do
-                        expect(@p.imc).to eq(17.506)
+                        expect(@p1.imc).to eq(17.506)
                 end
+		it "Debe existir un metodo para clasificar individuos por imc en una lista" do
+			@l.insert_tail(@p1)
+                        @l.insert_tail(@p2)
+                        @l.insert_tail(@p3)
+                        @l.insert_tail(@p4)
+                        @l.insert_tail(@p5) 
+			@l.insert_tail(@p6)
+                        @l.insert_tail(@p7)
+                        @l.insert_tail(@p8)
+                        @l.recorrer_imc
+                        expect(@l.bajo_peso).to eq([@p1])
+                        expect(@l.adecuado).to eq([@p3,@p7])
+			expect(@l.sobrepeso).to eq([@p2,@p8])
+			expect(@l.obesidad_1).to eq([@p4])
+			expect(@l.obesidad_2).to eq([@p5])
+			expect(@l.obesidad_3).to eq([@p6])
+
+		end
         end
-	
+		
 end
