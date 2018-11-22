@@ -234,7 +234,7 @@ RSpec.describe Paciente do
 	
 	describe "Probando el initialize" do
 		it "Paciente tiene que tener un nombre, una edad y un sexo" do
-			p=Paciente("Lara",22,0)
+			p=Paciente.new("Lara",22,0)
 		end
 	end
 end
