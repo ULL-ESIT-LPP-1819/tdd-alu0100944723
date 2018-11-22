@@ -241,5 +241,12 @@ RSpec.describe Paciente do
 		it "Paciente tiene que tener un nombre, una edad y un sexo, debe tener también las medidas antropométricas tomadas" do
 			p=Paciente.new("Lara",22,0,50,1.69,62,65)
 		end		
-	end	
+	end
+	
+        describe "Clasificando por el imc" do
+                it "Debe existir un metodo para calcular el imc" do
+                        expect(@p.imc).to eq(17.506)
+                end
+        end
+	
 end
