@@ -211,3 +211,6 @@ RSpec.describe Individuo do
 		end
 	end
 end
+
+RSpec.describe Paciente do
+end
