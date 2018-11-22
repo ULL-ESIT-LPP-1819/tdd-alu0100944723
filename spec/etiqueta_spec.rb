@@ -209,6 +209,10 @@ RSpec.describe Individuo do
 			expect(@i.edad).to eq(25)
 			expect(@i.sexo).to eq(0)
 		end
+		it"Probando cuál es la clase de un individuo" do
+			expect(@i.class).to eq(Individuo)
+			expect(Individuo.class).to eq(Class)
+		end
 	end
 end
 
@@ -226,6 +230,5 @@ RSpec.describe Paciente do
 		it"BasicObject es es superclase de Object" do
 			expect(Object.superclass).to eq(BasicObject)
 		end
-	end
-
+	end	
 end
