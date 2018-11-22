@@ -196,4 +196,10 @@ RSpec.describe Lista do
 end
 
 RSpec.describe Individuo do
+	describe "Pruebas basicas de los individuos" do
+		it"Probando el initialize de los individuos" do
+			i=Individuo.new("Clara",25,0)
+		end
+		
+	end
 end
