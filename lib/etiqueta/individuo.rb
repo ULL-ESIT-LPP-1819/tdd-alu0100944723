@@ -7,3 +7,5 @@ class Individuo
 	end	
 end
 
+class Paciente
+end
