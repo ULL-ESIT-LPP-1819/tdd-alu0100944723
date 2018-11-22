@@ -23,4 +23,10 @@ class Paciente < Individuo
 	def imc 
 		(@peso/(@talla*@talla)).round(3)	
 	end
+	
+	def to_s
+	s=""
+	s << super.to_s
+	s << ",Peso:#{@peso},Talla:#{@talla},Cintura:#{@cmcin},Cadera:#{@cmcad}"
+	end
 end
