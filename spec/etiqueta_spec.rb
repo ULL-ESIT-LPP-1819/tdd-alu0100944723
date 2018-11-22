@@ -217,6 +217,11 @@ RSpec.describe Individuo do
 end
 
 RSpec.describe Paciente do
+
+	before :each do
+		@p=Paciente.new("Lara",22,0,50,1.69,62,65)	
+        end
+
 	
 	describe  "Probando la jerarquía de clases" do
 		it"Individuo es superclase de Paciente" do
@@ -235,10 +240,6 @@ RSpec.describe Paciente do
 	describe "Probando el initialize" do
 		it "Paciente tiene que tener un nombre, una edad y un sexo, debe tener también las medidas antropométricas tomadas" do
 			p=Paciente.new("Lara",22,0,50,1.69,62,65)
-		end
-		
-		
-	end
-
-	
+		end		
+	end	
 end

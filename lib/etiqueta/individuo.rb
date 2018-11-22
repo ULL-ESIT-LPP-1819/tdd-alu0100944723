@@ -8,7 +8,11 @@ class Individuo
 end
 
 class Paciente < Individuo
-	def initialize(nombre,edad,sexo)
+	def initialize(nombre,edad,sexo,peso,talla,cmcin,cmcad)
 		super(nombre,edad,sexo)
+		@peso=peso
+		@talla=talla
+		@cmcin=cmcin
+		@cmcad=cmcad
 	end
 end
