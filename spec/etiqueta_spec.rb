@@ -233,8 +233,12 @@ RSpec.describe Paciente do
 	end	
 	
 	describe "Probando el initialize" do
-		it "Paciente tiene que tener un nombre, una edad y un sexo" do
-			p=Paciente.new("Lara",22,0)
+		it "Paciente tiene que tener un nombre, una edad y un sexo, debe tener también las medidas antropométricas tomadas" do
+			p=Paciente.new("Lara",22,0,50,1.69,62,65)
 		end
+		
+		
 	end
+
+	
 end
