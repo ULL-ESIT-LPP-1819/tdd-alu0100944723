@@ -7,5 +7,5 @@ class Individuo
 	end	
 end
 
-class Paciente
+class Paciente < Individuo
 end

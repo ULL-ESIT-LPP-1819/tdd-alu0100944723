@@ -198,7 +198,6 @@ end
 RSpec.describe Individuo do
 	  before :each do
                 @i=Individuo.new("Clara",25,0)
-		@p=Paciente.new
         end
 	
 	describe "Pruebas basicas de los individuos" do
