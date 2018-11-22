@@ -198,6 +198,7 @@ end
 RSpec.describe Individuo do
 	  before :each do
                 @i=Individuo.new("Clara",25,0)
+		@p=Paciente.new
         end
 	
 	describe "Pruebas basicas de los individuos" do
@@ -213,4 +214,19 @@ RSpec.describe Individuo do
 end
 
 RSpec.describe Paciente do
+	
+	describe  "Probando la jerarquía de clases" do
+		it"Individuo es superclase de Paciente" do
+			expect(Paciente.superclass).to eq(Individuo)
+		end
+	
+		it"Object es superclase de Individuo" do
+			 expect(Individuo.superclass).to eq(Object)
+		end
+		
+		it"BasicObject es es superclase de Object" do
+			expect(Object.superclass).to eq(BasicObject)
+		end
+	end
+
 end
