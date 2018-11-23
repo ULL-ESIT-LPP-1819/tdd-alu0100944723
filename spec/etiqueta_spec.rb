@@ -258,6 +258,7 @@ RSpec.describe Paciente do
 			expect(@p1.kind_of?Paciente).to eq(true)
 			expect(@p1.kind_of?Individuo).to eq(true)
 			expect(@p1.kind_of?BasicObject).to eq(true)
+			expect(@p1.respond_to?:imc).to eq(true)
 		end
 	end	
 	
