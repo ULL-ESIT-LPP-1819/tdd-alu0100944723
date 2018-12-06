@@ -318,7 +318,7 @@ RSpec.describe "Utilizando los modulos" do
         	@p2=Paciente.new("CLara",35,0,60,1.50,62,65)
         	@p3=Paciente.new("Mario",16,1,60,1.68,62,65)
         	@p4=Paciente.new("Sara",23,0,80,1.60,62,65)
-
+		@l=Lista.new
         end
 	context "Comparable" do
 		it "Comparaciones entre etiquetas" do
@@ -337,6 +337,21 @@ RSpec.describe "Utilizando los modulos" do
                         expect(@p4>=@p2).to eq(true)
                         expect(@p2<=@p2).to eq(true)
                         expect(@p3.between?(@p1,@p2)).to eq(true)
+		end
+	end
+	
+	context "Enumerable" do
+		it "Lista enumerable" do
+			@l.insert_tail(1)
+			@l.insert_tail(2)
+			@l.insert_tail(4)
+			@l.insert_tail(3)
+			@l.insert_tail(5)
+			expect(@l.collect {|x| x}).to eq([1,2,4,3,5])
+			expect(@l.select {|x| x<=2}).to eq([1,2])
+			expect(@l.max).to eq(5)
+			expect(@l.min).to eq(1)
+			expect(@l.sort).to eq([1,2,3,4,5])
 		end
 	end
 end
