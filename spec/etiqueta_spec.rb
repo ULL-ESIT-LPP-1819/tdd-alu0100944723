@@ -322,7 +322,7 @@ RSpec.describe "Utilizando los modulos" do
 			expect(@e1==@e3).to eq(true)
 			expect(@e1>=@e2).to eq(true)
 			expect(@e1<=@e3).to eq(true)
-			expect(@e4.between(@e1,@e2)).to eq(true)
+			expect(@e2.between?(@e4,@e1)).to eq(true)
 		end
 	end
 end
