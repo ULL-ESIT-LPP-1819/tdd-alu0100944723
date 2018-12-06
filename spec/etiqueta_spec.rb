@@ -348,7 +348,7 @@ RSpec.describe "Utilizando los modulos" do
 			@l.insert_tail(3)
 			@l.insert_tail(5)
 			expect(@l.collect {|x| x}).to eq([1,2,4,3,5])
-			expect(@l.select {|x| x<=2}).to eq([1,2])
+			expect(@l.select {|i| i<=2}).to eq([1,2])
 			expect(@l.max).to eq(5)
 			expect(@l.min).to eq(1)
 			expect(@l.sort).to eq([1,2,3,4,5])

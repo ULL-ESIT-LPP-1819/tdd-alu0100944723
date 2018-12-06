@@ -1,6 +1,9 @@
 Node=Struct.new(:value,:next,:prev)
 
 class Lista
+		
+	include Enumerable
+	
 	attr_reader :head, :tail, :salmenor6, :salmayor6, :bajo_peso, :adecuado, :sobrepeso, :obesidad_1, :obesidad_2, :obesidad_3
 	def initialize
 		@head=nil
@@ -105,5 +108,13 @@ class Lista
  			end
 		 end
 
+	end
+	
+	def each
+		head=@head
+                while head!=nil
+				yield head.value
+				head=head.next		
+		end
 	end
 end
