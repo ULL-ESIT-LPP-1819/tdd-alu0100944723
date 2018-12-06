@@ -309,8 +309,8 @@ end
 
 RSpec.describe "Utilizando los modulos" do
 	
-        before :all do
-		@e4=Informacion_nutricional.new("producto3",1.2,1.4,0.2,6.7,6.7,2.6,7.3)
+        before :each do
+		@e4=Informacion_nutricional.new("producto4",1.2,1.4,0.2,6.7,6.7,2.6,7.3)
                 @e3=Informacion_nutricional.new("producto3",1.2,1.4,0.2,6.7,6.7,2.6,9.3)
                 @e2=Informacion_nutricional.new("producto2",1.2,1.4,0.2,6.7,6.7,2.6,8.0)
                 @e1=Informacion_nutricional.new("producto1",1.2,1.4,0.2,6.7,6.7,2.6,9.3)
@@ -352,6 +352,17 @@ RSpec.describe "Utilizando los modulos" do
 			expect(@l.max).to eq(5)
 			expect(@l.min).to eq(1)
 			expect(@l.sort).to eq([1,2,3,4,5])
+		end
+	
+		it "Lista de etiquetas enumerable" do
+			@l.insert_tail(@e1)
+			@l.insert_tail(@e2)
+			@l.insert_tail(@e4)
+			expect(@l.collect {|x| x.nombre}).to eq(["producto1","producto2","producto4"])
+                        expect(@l.select {|i| i.nombre=="producto4"}).to eq([@e4])
+                        expect(@l.max).to eq(@e1)
+                        expect(@l.min).to eq(@e4)
+                        expect(@l.sort).to eq([@e4,@e2,@e1])
 		end
 	end
 end
