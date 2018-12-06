@@ -364,5 +364,18 @@ RSpec.describe "Utilizando los modulos" do
                         expect(@l.min).to eq(@e4)
                         expect(@l.sort).to eq([@e4,@e2,@e1])
 		end
+		
+		it "Lista de individuos enumerable" do
+		        @l.insert_tail(@p1)
+                        @l.insert_tail(@p2)
+			@l.insert_tail(@p3)	
+                        @l.insert_tail(@p4)
+                        expect(@l.collect {|x| x.imc}).to eq([17.506,26.667,21.259,31.25])
+                        expect(@l.select {|i| i.imc.between?(18.5,24.9)}).to eq([@p3])
+                        expect(@l.max).to eq(@p4)
+                        expect(@l.min).to eq(@p1)
+                        expect(@l.sort).to eq([@p1,@p3,@p2,@p4])
+	
+		end
 	end
 end
