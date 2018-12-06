@@ -1,0 +1,17 @@
+Thu, 06 Dec 2018 19:43:40 +0000
+./lib/etiqueta/etiqueta.rb	Thu, 06 Dec 2018 19:29:48 +0000
+./lib/etiqueta/lista.rb	Thu, 06 Dec 2018 19:36:13 +0000
+./lib/etiqueta/individuo.rb	Thu, 06 Dec 2018 19:28:53 +0000
+./lib/etiqueta/version.rb	Thu, 08 Nov 2018 20:35:53 +0000
+./lib/etiqueta.rb	Thu, 22 Nov 2018 23:57:22 +0000
+./Gemfile	Thu, 08 Nov 2018 20:35:53 +0000
+./Guardfile	Thu, 22 Nov 2018 23:57:22 +0000
+./README.md	Thu, 08 Nov 2018 21:17:06 +0000
+./etiqueta.gemspec	Thu, 22 Nov 2018 23:57:22 +0000
+./Gemfile.lock	Thu, 22 Nov 2018 23:57:22 +0000
+./bin/setup	Thu, 08 Nov 2018 20:35:53 +0000
+./bin/console	Thu, 08 Nov 2018 20:35:53 +0000
+./Rakefile	Thu, 08 Nov 2018 20:35:53 +0000
+./spec/spec_helper.rb	Thu, 08 Nov 2018 20:35:53 +0000
+./spec/etiqueta_spec.rb	Thu, 06 Dec 2018 18:37:02 +0000
+./spec/etiqueta_spec.rb.save	Fri, 23 Nov 2018 02:10:45 +0000
