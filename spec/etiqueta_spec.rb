@@ -2,8 +2,14 @@ require 'etiqueta'
 
 RSpec.describe Etiqueta do
 	
-	before :each do
+	before :each do		
 		@e=Informacion_nutricional.new("producto",1.2,1.4,0.2,6.7,6.7,2.6,0.18)
+                @e5=Informacion_nutricional.new("producto5",1.2,1.4,0.2,6.7,6.7,2.6,1.2)
+                @e4=Informacion_nutricional.new("producto4",1.2,1.4,0.2,6.7,6.7,2.6,3.50)
+                @e3=Informacion_nutricional.new("producto3",1.2,1.4,0.2,6.7,6.7,2.6,6.8)
+                @e2=Informacion_nutricional.new("producto2",1.2,1.4,0.2,6.7,6.7,2.6,8.0)
+                @e1=Informacion_nutricional.new("producto1",1.2,1.4,0.2,6.7,6.7,2.6,9.3)
+
 	end
 
 	it "has a version number" do
@@ -81,6 +87,7 @@ describe "Prueba de obtencion de la salida formateada" do
 		expect(@e.to_s).to eq( "Valor Energético:\n kcal 63.48 \n kj 266.2\n_______________________\nGrasas 2.8 \n de las cuales \n saturadas 1.2 \n monoinsaturadas 1.4\n poliinsaruradas 0.2\n_______________________\nHidratos de carbono 6.7\n de los cuales \n azucares 6.7\n_______________________\n proteinas 2.6\n_______________________\n sal 0.18\n_______________________\n ")
 	end 
 end
+		
 end
 RSpec.describe Node do
 	it "Debe existir un nodo" do
@@ -259,6 +266,7 @@ RSpec.describe Paciente do
 			expect(@p1.kind_of?Individuo).to eq(true)
 			expect(@p1.kind_of?BasicObject).to eq(true)
 			expect(@p1.respond_to?:imc).to eq(true)
+			
 		end
 	end	
 	
@@ -296,5 +304,25 @@ RSpec.describe Paciente do
 			expect(@p1.to_s).to eq("Nombre:Lara,Edad:27,Sexo:0,Peso:50,Talla:1.69,Cintura:62,Cadera:65")
 		end
 
+	end
+end
+
+RSpec.describe "Utilizando los modulos" do
+	
+        before :each do
+		@e4=Informacion_nutricional.new("producto3",1.2,1.4,0.2,6.7,6.7,2.6,7.3)
+                @e3=Informacion_nutricional.new("producto3",1.2,1.4,0.2,6.7,6.7,2.6,9.3)
+                @e2=Informacion_nutricional.new("producto2",1.2,1.4,0.2,6.7,6.7,2.6,8.0)
+                @e1=Informacion_nutricional.new("producto1",1.2,1.4,0.2,6.7,6.7,2.6,9.3)
+        end
+	context "Comparable" do
+		it "Comparaciones entre etiquetas" do
+                	expect(@e1>@e2).to eq(true)
+			expect(@e2<@e1).to eq(true)
+			expect(@e1==@e3).to eq(true)
+			expect(@e1>=@e2).to eq(true)
+			expect(@e1<=@e3).to eq(true)
+			expect(@e4.between(@e1,@e2)).to eq(true)
+		end
 	end
 end
