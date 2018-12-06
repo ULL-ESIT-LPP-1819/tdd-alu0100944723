@@ -309,11 +309,16 @@ end
 
 RSpec.describe "Utilizando los modulos" do
 	
-        before :each do
+        before :all do
 		@e4=Informacion_nutricional.new("producto3",1.2,1.4,0.2,6.7,6.7,2.6,7.3)
                 @e3=Informacion_nutricional.new("producto3",1.2,1.4,0.2,6.7,6.7,2.6,9.3)
                 @e2=Informacion_nutricional.new("producto2",1.2,1.4,0.2,6.7,6.7,2.6,8.0)
                 @e1=Informacion_nutricional.new("producto1",1.2,1.4,0.2,6.7,6.7,2.6,9.3)
+		@p1=Paciente.new("Lara",27,0,50,1.69,62,65)
+        	@p2=Paciente.new("CLara",35,0,60,1.50,62,65)
+        	@p3=Paciente.new("Mario",16,1,60,1.68,62,65)
+        	@p4=Paciente.new("Sara",23,0,80,1.60,62,65)
+
         end
 	context "Comparable" do
 		it "Comparaciones entre etiquetas" do
@@ -323,6 +328,15 @@ RSpec.describe "Utilizando los modulos" do
 			expect(@e1>=@e2).to eq(true)
 			expect(@e1<=@e3).to eq(true)
 			expect(@e2.between?(@e4,@e1)).to eq(true)
+		end
+		
+		it "Comparaciones entre individuos" do
+			expect(@p2>@p1).to eq(true)
+                        expect(@p1<@p3).to eq(true)
+                        expect(@p1==@p1).to eq(true)
+                        expect(@p4>=@p2).to eq(true)
+                        expect(@p2<=@p2).to eq(true)
+                        expect(@p1.between?(0,@p2)).to eq(true)
 		end
 	end
 end

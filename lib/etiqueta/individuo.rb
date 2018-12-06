@@ -30,3 +30,4 @@ class Paciente < Individuo
 	s << ",Peso:#{@peso},Talla:#{@talla},Cintura:#{@cmcin},Cadera:#{@cmcad}"
 	end
 end
+	
