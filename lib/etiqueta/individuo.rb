@@ -1,5 +1,5 @@
-class Individuo 
-
+class Individuo
+	
 	attr_reader :nombre, :edad, :sexo
 
 	def initialize(nombre,edad,sexo) #sexo 0=femenino,1=masculino
@@ -12,6 +12,9 @@ class Individuo
 end
 
 class Paciente < Individuo
+		
+	include Comparable
+	
 	def initialize(nombre,edad,sexo,peso,talla,cmcin,cmcad)
 		super(nombre,edad,sexo)
 		@peso=peso
@@ -28,6 +31,10 @@ class Paciente < Individuo
 	s=""
 	s << super.to_s
 	s << ",Peso:#{@peso},Talla:#{@talla},Cintura:#{@cmcin},Cadera:#{@cmcad}"
+	end
+	
+	def <=> (individuo)
+		self.imc<=>individuo.imc
 	end
 end
 	
