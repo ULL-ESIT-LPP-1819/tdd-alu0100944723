@@ -323,6 +323,7 @@ RSpec.describe Paciente do
 		it "Probando que existe el gasto_actividad_fisica" do
 			expect(@p2.nivel_actividad).to eq(1)
 			expect(@p2.factor_actividad).to eq(0.12)
+			expect(@p3.gasto_actividad_fisica).to eq(425.25)
 		end
 	end
 
