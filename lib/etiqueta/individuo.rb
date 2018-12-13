@@ -43,5 +43,10 @@ class Paciente < Individuo
 	def <=> (individuo)
 		self.imc<=>individuo.imc
 	end
+	
+	# Método que calcula el peso teórico ideal
+	def peso_teorico_ideal
+		((@talla*100)-150)*0.75+50
+	end
 end
 	
