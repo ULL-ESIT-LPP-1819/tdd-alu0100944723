@@ -57,5 +57,10 @@ class Paciente < Individuo
 			(10*@peso)+(6.25*@talla*100)-(5*@edad)+5
 		end
 	end
+	
+	# Método que calcula el efecto termógeno
+	def efecto_termogeno
+		self.gasto_energetico_basal*0.10
+	end
 end
 	
