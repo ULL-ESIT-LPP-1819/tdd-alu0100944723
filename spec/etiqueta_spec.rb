@@ -310,6 +310,11 @@ RSpec.describe Paciente do
                 it "Probando que existe el peso teórico ideal" do
                         expect(@p1.peso_teorico_ideal).to eq(64.25)
 		end
+	
+		it "Probando que existe el gasto energético basal" do
+			expect(@p1.gasto_energetico_basal).to eq(1260.25)
+			expect(@p3.gasto_energetico_basal).to eq(1575)
+		end
 	end
 
 end
