@@ -79,6 +79,11 @@ class Paciente < Individuo
 	# Método que calcula el gasto por actividad física
 	def gasto_actividad_fisica
 		self.gasto_energetico_basal*self.factor_actividad
+	end
+	
+	# Método que calculo el gasto energético total
+	def gasto_energetico_total
+		self.gasto_energetico_basal+self.gasto_actividad_fisica+self.efecto_termogeno
 	end	
 end
 	
