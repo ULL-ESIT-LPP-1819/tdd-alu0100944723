@@ -74,6 +74,11 @@ class Paciente < Individuo
 		elsif @nivel_actividad==3
 			0.54
 		end
+	end
+	
+	# Método que calcula el gasto por actividad física
+	def gasto_actividad_fisica
+		self.gasto_energetico_basal*self.factor_actividad
 	end	
 end
 	
