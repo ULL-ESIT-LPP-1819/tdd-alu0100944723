@@ -325,6 +325,10 @@ RSpec.describe Paciente do
 			expect(@p2.factor_actividad).to eq(0.12)
 			expect(@p3.gasto_actividad_fisica).to eq(425.25)
 		end
+		
+		it "Probando el gasto energético total" do
+			expect(@p1.gasto_energetico_total).to eq(1386.275)
+		end
 	end
 
 end
