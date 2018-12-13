@@ -48,5 +48,14 @@ class Paciente < Individuo
 	def peso_teorico_ideal
 		((@talla*100)-150)*0.75+50
 	end
+	
+	# Método que calcula el gasto energético basal
+	def gasto_energetico_basal
+		if @sexo==0
+			(10*@peso)+(6.25*@talla*100)-(5*@edad)-161
+		else
+			(10*@peso)+(6.25*@talla*100)-(5*@edad)+5
+		end
+	end
 end
 	
