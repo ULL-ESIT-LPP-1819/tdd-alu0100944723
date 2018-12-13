@@ -232,14 +232,14 @@ RSpec.describe Paciente do
 	before :each do
 	
 	@l=Lista.new
-	@p1=Paciente.new("Lara",27,0,50,1.69,62,65)
-	@p2=Paciente.new("CLara",35,0,60,1.50,62,65)
-	@p3=Paciente.new("Mario",16,1,60,1.68,62,65)
- 	@p4=Paciente.new("Sara",23,0,80,1.60,62,65)
- 	@p5=Paciente.new("Paula",25,0,110,1.70,62,65)
- 	@p6=Paciente.new("Juan",28,1,120,1.70,62,65)
-	@p7=Paciente.new("Pedro",26,1,60,1.70,62,65)
-	@p8=Paciente.new("Maria",29,0,70,1.64,62,65)	
+	@p1=Paciente.new("Lara",27,0,50,1.69,62,65,0)
+	@p2=Paciente.new("CLara",35,0,60,1.50,62,65,1)
+	@p3=Paciente.new("Mario",16,1,60,1.68,62,65,2)
+ 	@p4=Paciente.new("Sara",23,0,80,1.60,62,65,3)
+ 	@p5=Paciente.new("Paula",25,0,110,1.70,62,65,0)
+ 	@p6=Paciente.new("Juan",28,1,120,1.70,62,65,1)
+	@p7=Paciente.new("Pedro",26,1,60,1.70,62,65,2)
+	@p8=Paciente.new("Maria",29,0,70,1.64,62,65,3)	
 
         end
 
@@ -272,7 +272,7 @@ RSpec.describe Paciente do
 	
 	describe "Probando el initialize" do
 		it "Paciente tiene que tener un nombre, una edad y un sexo, debe tener también las medidas antropométricas tomadas" do
-			p=Paciente.new("Lara",22,0,50,1.69,62,65)
+			p=Paciente.new("Lara",22,0,50,1.69,62,65,0)
 		end		
 	end
 	
@@ -319,6 +319,11 @@ RSpec.describe Paciente do
 		it "Probando que existe el efecto termógeno" do
 			expect(@p1.efecto_termogeno).to eq(126.025)
 		end
+		
+		it "Probando que existe el gasto_actividad_fisica" do
+			expect(@p2.nivel_actividad).to eq(1)
+			expect(@p2.factor_actividad).to eq(0.12)
+		end
 	end
 
 end
@@ -330,10 +335,10 @@ RSpec.describe "Utilizando los modulos" do
                 @e3=Informacion_nutricional.new("producto3",1.2,1.4,0.2,6.7,6.7,2.6,9.3)
                 @e2=Informacion_nutricional.new("producto2",1.2,1.4,0.2,6.7,6.7,2.6,8.0)
                 @e1=Informacion_nutricional.new("producto1",1.2,1.4,0.2,6.7,6.7,2.6,9.3)
-		@p1=Paciente.new("Lara",27,0,50,1.69,62,65)
-        	@p2=Paciente.new("CLara",35,0,60,1.50,62,65)
-        	@p3=Paciente.new("Mario",16,1,60,1.68,62,65)
-        	@p4=Paciente.new("Sara",23,0,80,1.60,62,65)
+		@p1=Paciente.new("Lara",27,0,50,1.69,62,65,0)
+        	@p2=Paciente.new("CLara",35,0,60,1.50,62,65,1)
+        	@p3=Paciente.new("Mario",16,1,60,1.68,62,65,2)
+        	@p4=Paciente.new("Sara",23,0,80,1.60,62,65,3)
 		@l=Lista.new
         end
 	context "Comparable" do
