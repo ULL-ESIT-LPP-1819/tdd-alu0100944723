@@ -19,15 +19,16 @@ end
 # Hereda de Individuo
 # Author::  Carolina Álvarez Martín  (mailto:alu0100944723@ull.edu.es)
 class Paciente < Individuo
-		
+	attr_reader :nivel_actividad
 	include Comparable
 	# Se asignan los datos de un paciente
-	def initialize(nombre,edad,sexo,peso,talla,cmcin,cmcad)
+	def initialize(nombre,edad,sexo,peso,talla,cmcin,cmcad,nivel_actividad)
 		super(nombre,edad,sexo)
 		@peso=peso
 		@talla=talla
 		@cmcin=cmcin
 		@cmcad=cmcad
+		@nivel_actividad=nivel_actividad #0 en reposo,1 ligera, 2 moderada, 3 intensa
 	end
 	# Calcula el imc de un paciente
 	def imc 
@@ -62,5 +63,17 @@ class Paciente < Individuo
 	def efecto_termogeno
 		self.gasto_energetico_basal*0.10
 	end
+	# Método que calcula el factor de actividad física en base al nivel de actividad
+	def factor_actividad
+		if @nivel_actividad==0
+			0.0
+		elsif @nivel_actividad==1 
+			0.12
+		elsif @nivel_actividad==2
+			0.27
+		elsif @nivel_actividad==3
+			0.54
+		end
+	end	
 end
 	
