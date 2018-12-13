@@ -305,6 +305,13 @@ RSpec.describe Paciente do
 		end
 
 	end
+	
+        describe "Debe calcularse el gasto energético total para los individuos" do
+                it "Probando que existe el peso teórico total" do
+                        expect(@p1.peso_teórico_total).to eq(64.25)
+		end
+	end
+
 end
 
 RSpec.describe "Utilizando los modulos" do
