@@ -50,11 +50,11 @@ class Informacion_nutricional
         end	
 	# Cálculo del valor energético total de la etiqueta en Kcal
 	def valorenergeticokcal
-		self.valenkcalgrasas+self.valenkcalhidratos+self.valenkcalsal+self.valenkcalproteinas
+		(self.valenkcalgrasas+self.valenkcalhidratos+self.valenkcalsal+self.valenkcalproteinas).round(3)
 	end
 	# Cálculo del valor energético total de la etiqueta en Kj
 	def valorenergeticokj
-                self.valenkjgrasas+self.valenkjhidratos+self.valenkjsal+self.valenkjproteinas
+               (self.valenkjgrasas+self.valenkjhidratos+self.valenkjsal+self.valenkjproteinas).round(3)
         end
 	# Convierte en una Cadena nuestra etiqueta
 	def to_s
