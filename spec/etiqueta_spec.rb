@@ -362,7 +362,7 @@ RSpec.describe "Utilizando los modulos" do
                         expect(@p1==@p1).to eq(true)
                         expect(@p4>=@p2).to eq(true)
                         expect(@p2<=@p2).to eq(true)
-                        expect(@p3.between?(@p1,@p2)).to eq(true)
+                        expect(@p2.between?(@p1,@p3)).to eq(true)
 		end
 	end
 	
@@ -400,7 +400,7 @@ RSpec.describe "Utilizando los modulos" do
                         expect(@l.select {|i| i.imc.between?(18.5,24.9)}).to eq([@p3])
                         expect(@l.max).to eq(@p4)
                         expect(@l.min).to eq(@p1)
-                        expect(@l.sort).to eq([@p1,@p3,@p2,@p4])
+                        expect(@l.sort).to eq([@p1,@p2,@p3,@p4])
 	
 		end
 	end

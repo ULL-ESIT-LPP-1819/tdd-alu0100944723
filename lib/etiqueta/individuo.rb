@@ -42,7 +42,7 @@ class Paciente < Individuo
 	end
 	# Método para poder utilizar el módulo comparable
 	def <=> (individuo)
-		self.imc<=>individuo.imc
+		self.gasto_energetico_total<=>individuo.gasto_energetico_total
 	end
 	
 	# Método que calcula el peso teórico ideal
