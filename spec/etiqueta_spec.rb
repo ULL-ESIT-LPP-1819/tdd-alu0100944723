@@ -459,9 +459,50 @@ RSpec.describe "Haciendo menús" do
 	expect((margen2-sum2)<=(individuo[4].gasto_energetico_total) && (individuo[4].gasto_energetico_total)<=(margen2+sum2)).to eq(false)
 	expect((margen1-sum1)<=(individuo[5].gasto_energetico_total) && (individuo[5].gasto_energetico_total)<=(margen1+sum1)).to eq(false)		
 	end
+end
 
+RSpec.describe "Ordenando vectores y listas" do
+	before :all do
 
-
-
-
+   		@e5=Informacion_nutricional.new("producto5",0,0,0,25.0,25.0,0,0.08)
+                @e4=Informacion_nutricional.new("producto4",7.0,4.0,4.8,40,1,9.4,2)
+                @e3=Informacion_nutricional.new("producto3",0.34,0.20,0.40,4.0,1,9.4,1.1)
+                @e2=Informacion_nutricional.new("producto2",4.0,2.0,1.0,46,36,4,0.9)
+                @e1=Informacion_nutricional.new("producto1",0.5,0.5,0.4,30,0,0,0.08)
+                @e6=Informacion_nutricional.new("producto6",0.2,0.1,0.2,0,8.8,5.1,0.07)
+                @e7=Informacion_nutricional.new("producto7",5.9,4.2,3.1,62.3,2.0,11.0,1.75)
+                @e8=Informacion_nutricional.new("producto8",0.1,0.2,0.1,0,0,12.0,2)
+                @e9=Informacion_nutricional.new("producto9",2.7,2.0,1.2,62.0,32.0,7.0,0.9)
+                @e10=Informacion_nutricional.new("producto10",1.2,1.4,0.2,6.7,6.7,2.6,9.3)
+                @e11=Informacion_nutricional.new("producto11",1.2,1.4,0.2,6.7,6.7,2.6,1.2)
+                @e12=Informacion_nutricional.new("producto12",1.2,1.4,0.2,6.7,6.7,2.6,3.50)
+                @e13=Informacion_nutricional.new("producto13",1.2,1.4,0.2,6.7,6.7,2.6,6.8)
+                @e14=Informacion_nutricional.new("producto14",1.2,1.4,0.2,6.7,6.7,2.6,8.0)
+                @e15=Informacion_nutricional.new("producto15",1.2,1.4,0.2,6.7,6.7,2.6,9.3)
+                @p1=Paciente.new("Lara",27,0,50,1.69,62,65,0)
+                @p2=Paciente.new("CLara",35,0,60,1.50,62,65,1)
+                @p3=Paciente.new("Mario",16,1,60,1.68,62,65,2)
+                @p4=Paciente.new("Sara",23,0,80,1.60,62,65,3)
+                @p5=Paciente.new("Paula",25,0,110,1.70,62,65,0)
+		@p6=Paciente.new("Juan",28,1,120,1.70,62,65,1)
+        	@p7=Paciente.new("Pedro",26,1,60,1.70,62,65,2)
+        	@p8=Paciente.new("Maria",29,0,70,1.64,62,65,3)
+		@p9=Paciente.new("Luis",26,1,55,1.52,62,65,2)
+                @p10=Paciente.new("Sergio",30,1,80,1.68,79,80,0)		
+	end
+	
+	it "Array de menús" do
+		menu1=[[@e1,@e2],[@e3,@e4,@e5],[@e6,@e7,@e8,@e9]]
+       		menu2=[[@e14,@e13,@e12,@e11],[@e6,@e7,@e8],[@e9,@e10]]
+        	menu3=[[@e15,@e1,@e2],[@e3,@e4],[@e7,@e8,@e9,@e2]]
+        	menu4=[[@e2,@e3,@e1],[@e15,@e14,@e13,@e12],[@e11,@e1]]
+		menu5=[[@e3,@e2],[@e2,@e4,@e5],[@e1,@e7,@e3,@e9]]
+       	 	menu6=[[@e14,@e15,@e12,@e9],[@e6,@e7,@e5],[@e4,@e10]]
+        	menu7=[[@e15,@e3,@e2],[@e5,@e4],[@e7,@e10,@e9,@e2]]
+        	menu8=[[@e11,@e3,@e1],[@e15,@e8,@e13,@e12],[@e11,@e9]]
+        	menu9=[[@e1,@e3],[@e3,@e4,@e15],[@e6,@e7,@e8,@e10]]
+        	menu10=[[@e12,@e13,@e9,@e11],[@e6,@e11,@e8],[@e9,@e3]]
+        	menus=[menu1,menu2,menu3,menu4,menu5,menu6,menu7,menu8,menu9,menu10]
+		expect(menus.suma).to eq([])
+	end
 end
