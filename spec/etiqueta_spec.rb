@@ -504,6 +504,7 @@ RSpec.describe "Ordenando vectores y listas" do
         	menu10=[[@e12,@e13,@e9,@e11],[@e6,@e11,@e8],[@e9,@e3]]
         	menus=[menu1,menu2,menu3,menu4,menu5,menu6,menu7,menu8,menu9,menu10]
 		expect(menus.suma).to eq([1768.34, 1330.72, 2029.14, 1088.02, 2016.48, 1664.8, 2051.14, 1043.84, 1370.02, 1152.38])
+		expect(menus.respond_to?ordenar_for).to eq (true)
 	end
 end
 
