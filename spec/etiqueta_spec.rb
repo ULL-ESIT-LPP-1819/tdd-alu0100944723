@@ -1,4 +1,5 @@
 require 'etiqueta'
+require 'benchmark'
 
 RSpec.describe Etiqueta do
 	
@@ -506,6 +507,11 @@ RSpec.describe "Ordenando vectores y listas" do
 		expect(menus.suma).to eq([1768.34, 1330.72, 2029.14, 1088.02, 2016.48, 1664.8, 2051.14, 1043.84, 1370.02, 1152.38])
 		expect(menus.ordenar_for).to eq ([menu8,menu4,menu10,menu2,menu9,menu6,menu1,menu5,menu3,menu7])
 		expect(menus.ordenar_each).to eq ([menu8,menu4,menu10,menu2,menu9,menu6,menu1,menu5,menu3,menu7])
+		Benchmark.bm do |x|
+		x.report{200.times do menus.ordenar_for end}
+		x.report{200.times do menus.ordenar_each end}
+		x.report{200.times do menus.sort end}
+		end		
 	end
 	
 	it "Lista de individuos" do
@@ -521,7 +527,13 @@ RSpec.describe "Ordenando vectores y listas" do
                 individuos.insert_tail(@p9)
                 individuos.insert_tail(@p10)
 		expect(individuos.ordenar_for).to eq([@p1,@p2,@p10,@p9,@p5,@p7,@p3,@p8,@p4,@p6])
-		expect(individuos.ordenar_each).to eq([@p1,@p2,@p10,@p9,@p5,@p7,@p3,@p8,@p4,@p6])
+		expect(individuos.ordenar_each).to eq([@p2,@p1,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10])
+		Benchmark.bm do |x|
+                x.report{200.times do individuos.ordenar_for end}
+                x.report{200.times do individuos.ordenar_each end}
+                x.report{200.times do individuos.sort end}
+                end
+
 	end		
 end
 

@@ -148,4 +148,26 @@ class Lista
 
 		aux		
 	end
+	
+	def ordenar_each
+		aux=[]
+                self.each do |i|
+                        aux << i
+                end
+  
+ 	aux.each do
+       		|x|
+		i=0
+                j=i+1
+                if aux[i] < aux[j]
+                        tmp=aux[i]
+                        aux[i]=aux[j]                      
+		        aux[j]=tmp
+                end
+                i=i+1
+                j=j+1
+      	end
+		aux
+	end
+		
 end
