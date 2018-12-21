@@ -507,6 +507,21 @@ RSpec.describe "Ordenando vectores y listas" do
 		expect(menus.ordenar_for).to eq ([menu8,menu4,menu10,menu2,menu9,menu6,menu1,menu5,menu3,menu7])
 		expect(menus.ordenar_each).to eq ([menu8,menu4,menu10,menu2,menu9,menu6,menu1,menu5,menu3,menu7])
 	end
+	
+	it "Lista de individuos" do
+		individuos=Lista.new
+		individuos.insert(@p1)
+		individuos.insert(@p2)
+		individuos.insert(@p3)
+		individuos.insert(@p4)
+		individuos.insert(@p5)
+		individuos.insert(@p6)
+                individuos.insert(@p7)
+                individuos.insert(@p8)
+                individuos.insert(@p9)
+                individuos.insert(@p10)
+		expect(individuos.ordenar_for).to eq([])
+	end		
 end
 
 
