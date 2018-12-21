@@ -15,4 +15,18 @@ class  Array
 		end	
 		self			 
 	end
+	
+	def ordenar_each
+		self.each do
+			i=0 
+			j=i+1
+			if self.suma[i] > self.suma[j]
+                                        aux=self[i]
+                                        self[i]=self[j]
+                                        self[j]=aux       
+		        end
+			i=i+1
+			j=j+1
+		end
+	end
 end
