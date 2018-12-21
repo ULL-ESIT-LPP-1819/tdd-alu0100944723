@@ -156,7 +156,6 @@ class Lista
                 end
   
  	aux.each do
-       		|x|
 		i=0
                 j=i+1
                 if aux[i] < aux[j]

@@ -4,29 +4,32 @@ class  Array
 	end
 	
 	def ordenar_for
+		aux=self
 		for i in 0..((self.count)-1)
 			for j in i+1..self.count-1
-				if self.suma[i] > self.suma[j]
-					aux=self[i]
-					self[i]=self[j]
-					self[j]=aux
+				if aux.suma[i] > aux.suma[j]
+					tmp=aux[i]
+					aux[i]=aux[j]
+					aux[j]=tmp
 				end
 			end
 		end	
-		self			 
+		aux			 
 	end
 	
 	def ordenar_each
-		self.each do
+		aux=self
+		aux.each do
 			i=0 
 			j=i+1
-			if self.suma[i] > self.suma[j]
-                                        aux=self[i]
-                                        self[i]=self[j]
-                                        self[j]=aux       
+			if aux.suma[i] > aux.suma[j]
+                                        tmp=aux[i]
+                                        aux[i]=aux[j]
+                                        aux[j]=aux       
 		        end
 			i=i+1
 			j=j+1
 		end
+		aux
 	end
 end
