@@ -521,6 +521,7 @@ RSpec.describe "Ordenando vectores y listas" do
                 individuos.insert_tail(@p9)
                 individuos.insert_tail(@p10)
 		expect(individuos.ordenar_for).to eq([@p1,@p2,@p10,@p9,@p5,@p7,@p3,@p8,@p4,@p6])
+		expect(individuos.ordenar_each).to eq([@p1,@p2,@p10,@p9,@p5,@p7,@p3,@p8,@p4,@p6])
 	end		
 end
 
