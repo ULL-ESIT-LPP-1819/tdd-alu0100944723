@@ -129,4 +129,23 @@ class Lista
 				head=head.next		
 		end
 	end
+	
+	def ordenar_for
+		
+		aux=[]
+		for i in self
+			aux << i
+		end
+		for i in 0..((aux.count)-1)
+                        for j in i+1..aux.count-1
+                                if aux[i] > aux[j]
+                                        tmp=aux[i]
+                                        aux[i]=aux[j]
+                                        aux[j]=tmp
+                                end
+                        end
+                end
+
+		aux		
+	end
 end

@@ -510,17 +510,17 @@ RSpec.describe "Ordenando vectores y listas" do
 	
 	it "Lista de individuos" do
 		individuos=Lista.new
-		individuos.insert(@p1)
-		individuos.insert(@p2)
-		individuos.insert(@p3)
-		individuos.insert(@p4)
-		individuos.insert(@p5)
-		individuos.insert(@p6)
-                individuos.insert(@p7)
-                individuos.insert(@p8)
-                individuos.insert(@p9)
-                individuos.insert(@p10)
-		expect(individuos.ordenar_for).to eq([])
+		individuos.insert_head(@p1)
+		individuos.insert_tail(@p2)
+		individuos.insert_tail(@p3)
+		individuos.insert_tail(@p4)
+		individuos.insert_tail(@p5)
+		individuos.insert_tail(@p6)
+                individuos.insert_tail(@p7)
+                individuos.insert_tail(@p8)
+                individuos.insert_tail(@p9)
+                individuos.insert_tail(@p10)
+		expect(individuos.ordenar_for).to eq([@p1,@p2,@p10,@p9,@p5,@p7,@p3,@p8,@p4,@p6])
 	end		
 end
 
